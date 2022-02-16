@@ -42,9 +42,6 @@
 
 * [About](#about)
 * [Examples](#examples)
-  * [**⚙️ JSX Components**](#️-jsx-components)
-  * [**🚥 State and Event**](#-state-and-event)
-  * [**💪 Flexible design**](#-flexible-design)
 * [Preview](#preview)
 * [License](#license)
 * [Contact](#contact)
@@ -61,6 +58,15 @@
 <tr>
 <td>
 
+這個專案為 redux 的應用展示，使用兩個第三方元件: `@reactjs/toolkit` 以及 `react-redux` 來開發 redux 的主要功能。 專案中分別利用 redux 實作了同步 (synchronous) 與非同步 (asynchronous) 的實際狀況。
+
+* 同步狀況
+  * 例如: `本地的狀態改變`、`不需要網路操作 (request/response)`
+  * 需要元件: 
+    * `createSlice, configureStore` from `@reactjs/toolkit`
+    * `Provider, useSelector, useDispatch` from `react-redux`
+* 非同步狀況
+  * 例如: `需要網路操作`、`載入資料庫物件 (fetch)`、`上傳物件到資料庫 (send request)`
 
 **Built With**
 
