@@ -1,70 +1,118 @@
-# Getting Started with Create React App
+<!--
+*** Thanks for checking out the react-redux-demo. If you have a suggestion
+*** that would make this better, please fork the repo and create a pull request
+*** or simply open an issue with the tag "enhancement".
+*** Thanks again! Now go create something AMAZING! :D
+***
+*** To avoid retyping too much info. Do a search and replace for the following:
+*** github_username (that is "windsuzu"), repo_name (that is "react-redux-demo"), project_title, project_description
+-->
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- [![Issues][issues-shield]][issues-url] -->
+<!-- [![PR Welcome][pr-welcome-shield]](#contributing) -->
+[![Contributors][contributors-shield]][contributors-url]
+[![MIT License][license-shield]][license-url]
+[![Author][author-shield]][author-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-## Available Scripts
 
-In the project directory, you can run:
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://windsuzu.github.io/react-redux-demo">
+    <img src="public/logo.jpg" alt="" height="120">
+  </a>
 
-### `npm start`
+  <h3 align="center">React Redux Demo</h3>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  <p align="center">
+    A simple example of using redux in react, which contains <b>reactjs/toolkit</b> and <b>react-redux</b>.
+    <br />
+    <a href="https://windsuzu.github.io/react-redux-demo">View Demo</a>
+    ·
+    <a href="https://github.com/windsuzu/react-redux-demo/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/windsuzu/react-redux-demo/issues">Request Feature</a>
+  </p>
+</p>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+<details>
+<summary>Table of Contents</summary>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* [About](#about)
+* [Examples](#examples)
+  * [**⚙️ JSX Components**](#️-jsx-components)
+  * [**🚥 State and Event**](#-state-and-event)
+  * [**💪 Flexible design**](#-flexible-design)
+* [Preview](#preview)
+* [License](#license)
+* [Contact](#contact)
+* [Acknowledgements](#acknowledgements)
 
-### `npm run build`
+</details>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<!-- ABOUT THE PROJECT -->
+## About
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<table>
+<tr>
+<td>
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Built With**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* HTML5, CSS3, Javascript ES6
+* React.js + Redux
+* @redux.js/toolkit
+* react-redux
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**[DEMO]** : https://windsuzu.github.io/react-redux-demo
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+</td>
+</tr>
+</table>
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Examples
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Preview
 
-### Code Splitting
+<!-- <p align="center">
+  <img src="images/web/1.png" width=68%>
+  <img src="images/phone/1.png" width=22%>
+</p>
+<p align="center">
+  <img src="images/web/2.png" width=68%>
+  <img src="images/phone/2.png" width=22%>
+</p> -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## License
 
-### Analyzing the Bundle Size
+Distributed under the MIT License. See [LICENSE](https://github.com/windsuzu/react-redux-demo/blob/main/LICENSE) for more information.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Contact
 
-### Making a Progressive Web App
+Reach out to the maintainer at one of the following places:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+* [GitHub discussions](https://github.com/windsuzu/react-redux-demo/discussions)
+* The email which is located [in GitHub profile](https://github.com/windsuzu)
 
-### Advanced Configuration
+## Acknowledgements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* [Maximilian Schwarzmüller](https://www.udemy.com/user/maximilian-schwarzmuller/)
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[contributors-shield]: https://img.shields.io/github/contributors/windsuzu/react-redux-demo.svg?style=for-the-badge
+[contributors-url]: https://github.com/windsuzu/react-redux-demo/graphs/contributors
+[issues-shield]: https://img.shields.io/github/issues/windsuzu/react-redux-demo.svg?style=for-the-badge
+[issues-url]: https://github.com/windsuzu/react-redux-demo/issues
+[license-shield]: https://img.shields.io/github/license/windsuzu/react-redux-demo.svg?style=for-the-badge&label=license
+[license-url]: https://github.com/windsuzu/react-redux-demo/blob/main/LICENSE
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/windsuzu
+[pr-welcome-shield]: https://shields.io/badge/PRs-Welcome-ff69b4?style=for-the-badge
+[author-shield]: https://shields.io/badge/Made_with_%E2%9D%A4_by-windsuzu-F4A92F?style=for-the-badge
+[author-url]: https://github.com/windsuzu
