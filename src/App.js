@@ -5,8 +5,7 @@ import Cart from "./components/Cart/Cart";
 import Layout from "./components/Layout/Layout";
 import Products from "./components/Shop/Products";
 import Notification from "./components/UI/Notification";
-import { cartActions } from "./store/cart-slice";
-import { uiActions } from "./store/ui-slice";
+import { fetchCartData, sendCartData } from "./store/cart-action";
 
 let isInitial = true;
 
@@ -18,64 +17,15 @@ function App() {
 
     // fetch data from server
     useEffect(() => {
-        fetch("https://test-e9746-default-rtdb.firebaseio.com/cart.json")
-            .then((res) => {
-                if (!res.ok) throw new Error("Fetching cart data failed.");
-                return res.json();
-            })
-            .then((data) => {
-                dispatch(cartActions.replaceCart(data));
-            })
-            .catch((err) =>
-                dispatch(
-                    uiActions.showNotification({
-                        status: "error",
-                        title: "Error!",
-                        message: err.message,
-                    })
-                )
-            );
+        dispatch(fetchCartData());
     }, [dispatch]);
 
     // update data to server
     useEffect(() => {
         if (!isInitial) {
-            dispatch(
-                uiActions.showNotification({
-                    status: "pending",
-                    title: "Sending...",
-                    message: "Sending Cart Data...",
-                })
-            );
-
-            fetch("https://test-e9746-default-rtdb.firebaseio.com/cart.json", {
-                method: "PUT",
-                body: JSON.stringify(cart),
-            })
-                .then((res) => {
-                    if (!res.ok) throw new Error("Sending cart data failed.");
-                    return res.json();
-                })
-                .then((data) =>
-                    dispatch(
-                        uiActions.showNotification({
-                            status: "success",
-                            title: "Success!",
-                            message: "Sent cart data Successfully!",
-                        })
-                    )
-                )
-                .catch((err) =>
-                    dispatch(
-                        uiActions.showNotification({
-                            status: "error",
-                            title: "Error!",
-                            message: err.message,
-                        })
-                    )
-                );
+            dispatch(sendCartData(cart));
         }
-
+        // prevent sending data again after fetching data
         if (!(cart.items.length === 0 && isInitial)) isInitial = false;
     }, [cart, dispatch]);
 
