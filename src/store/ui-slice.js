@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { fetchCartData, sendCartData } from "./cart-action";
 
 const uiSlice = createSlice({
     name: "ui",
@@ -7,11 +8,34 @@ const uiSlice = createSlice({
         toggle(state) {
             state.cartIsVisible = !state.cartIsVisible;
         },
-        showNotification(state, action) {
+    },
+    extraReducers: {
+        [fetchCartData.rejected]: (state, action) => {
             state.notification = {
-                status: action.payload.status,
-                title: action.payload.title,
-                message: action.payload.message,
+                status: "error",
+                title: "Error!",
+                message: action.error.message || "Fetching cart data failed.",
+            };
+        },
+        [sendCartData.pending]: (state, action) => {
+            state.notification = {
+                status: "pending",
+                title: "Sending...",
+                message: "Sending Cart Data...",
+            };
+        },
+        [sendCartData.fulfilled]: (state, action) => {
+            state.notification = {
+                status: "success",
+                title: "Success!",
+                message: "Sent cart data Successfully!",
+            };
+        },
+        [sendCartData.rejected]: (state, action) => {
+            state.notification = {
+                status: "error",
+                title: "Error!",
+                message: action.error.message,
             };
         },
     },
