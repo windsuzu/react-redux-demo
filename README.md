@@ -42,6 +42,11 @@
 
 * [About](#about)
 * [Examples](#examples)
+  * [✨ Synchronous Events](#-synchronous-events)
+  * [💫 Asynchronous Events](#-asynchronous-events)
+    * [⭐ branch-01-inside-components](#-branch-01-inside-components)
+    * [⭐⭐ branch-02-action-creator-thunk](#-branch-02-action-creator-thunk)
+    * [⭐⭐⭐ branch-03-createAsyncThunk](#-branch-03-createasyncthunk)
 * [Preview](#preview)
 * [License](#license)
 * [Contact](#contact)
@@ -109,7 +114,7 @@
 
 > 以 fetchCartData, sendCartData 功能為例，開發時可以選用下列三種方式導入 redux
 
-### ⭐ [branch-01-inside-components](https://github.com/windsuzu/react-redux-demo/tree/01-inside-components)
+#### ⭐ [branch-01-inside-components](https://github.com/windsuzu/react-redux-demo/tree/01-inside-components)
 
 這個方法將所有的**網路處理邏輯**寫在 App Component 當中。把 `slice / store` 保持得很乾淨，只有簡單的 state 與 action 處理；但對網路的處理 (等待、失敗、成功) 都寫在 `App Component`，讓 `App Component` 變得很雜亂。
 
@@ -120,9 +125,7 @@
   * [cartSlice](https://github.com/windsuzu/react-redux-demo/blob/01-inside-components/src/store/cart-slice.js)
   * [uiSlice](https://github.com/windsuzu/react-redux-demo/blob/01-inside-components/src/store/ui-slice.js)
 
----
-
-### ⭐⭐ [branch-02-action-creator-thunk](https://github.com/windsuzu/react-redux-demo/tree/02-action-creator-thunk)
+#### ⭐⭐ [branch-02-action-creator-thunk](https://github.com/windsuzu/react-redux-demo/tree/02-action-creator-thunk)
 
 這個方法將**網路處理邏輯**分開寫在一個額外的檔案 `cartAction` 中，並且因為 thunk 的優點，可以繼續使用 dispatch 發送更新需求給 redux。 原本的 `slice / store` 完全沒改變，而且 `App Component` 變得很乾淨。 
 
@@ -136,9 +139,7 @@
   * [App - sendCartData](https://github.com/windsuzu/react-redux-demo/blob/02-action-creator-thunk/src/App.js#L23-L30) **(become no asnyc code)**
 
 
----
-
-### ⭐⭐⭐ [branch-03-createAsyncThunk](https://github.com/windsuzu/react-redux-demo/tree/03-createAsyncThunk)
+#### ⭐⭐⭐ [branch-03-createAsyncThunk](https://github.com/windsuzu/react-redux-demo/tree/03-createAsyncThunk)
 
 這個方法是 02-action-creator-thunk 的進階方法，使用 @redux/toolkit 的 `createAsyncThunk` 讓**網路處理邏輯**和 `slice / store` 變得更清楚。 因為 `createAsyncThunk` 會自動產生每個 function 的 `pending`、`fulfilled` 和 `rejected` 三個狀況，所以我們可以在 `createSlice` 中用 `extraReducers` 去操控每個 function 三個狀況需要改變的 state。
 
