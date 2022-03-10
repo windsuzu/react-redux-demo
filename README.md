@@ -26,7 +26,7 @@
   <h3 align="center">React Redux Demo</h3>
 
   <p align="center">
-    A simple example of using redux in react, which contains <b>reactjs/toolkit</b> and <b>react-redux</b>.
+    A simple example of using redux in react, which contains <b>reduxjs/toolkit</b> and <b>react-redux</b>.
     <br />
     <a href="https://windsuzu.github.io/react-redux-demo">View Demo</a>
     ·
@@ -63,12 +63,12 @@
 <tr>
 <td>
 
-這個專案為 redux 的應用展示，使用兩個三方庫: `@reactjs/toolkit` 以及 `react-redux` 來開發 redux 的主要功能。 專案中分別利用 redux 實作了同步 (synchronous) 與非同步 (asynchronous) 的實際狀況。
+這個專案為 redux 的應用展示，使用兩個三方庫: `@reduxjs/toolkit` 以及 `react-redux` 來開發 redux 的主要功能。 專案中分別利用 redux 實作了同步 (synchronous) 與非同步 (asynchronous) 的實際狀況。
 
 ✨ 同步狀況
 * 例如: `本地的狀態改變`、`不需要網路操作 (request/response)`
 * 實作內容:
-  * `createSlice, configureStore` from `@reactjs/toolkit`
+  * `createSlice, configureStore` from `@reduxjs/toolkit`
   * `Provider, useSelector, useDispatch` from `react-redux`
 
 ---
@@ -81,7 +81,7 @@
   * 下載、更新 UI 介面 **(有三種作法)**
     1. 在 `components` 中處理獲得資料後的 dispatch 
     2. 自製 `Action Creator Thunk` 處理 dispatch
-    3. 使用 @reactjs/toolkit 提供的 `createAsyncThunk`
+    3. 使用 @reduxjs/toolkit 提供的 `createAsyncThunk`
 
 **Built With**
 
